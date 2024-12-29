@@ -1,0 +1,57 @@
+#include<stdio.h>
+int add(int a,int b);
+int sub(int a,int b);
+int mul(int a,int b);
+int div(int a,int b);
+
+int add(int a,int b){
+	return a+b;
+}
+
+int sub(int a,int b){
+	return a-b;
+}
+
+int mul(int a,int b){
+	return a*b;
+}
+
+int div(int a,int b){
+	if(a==0 || b==0){
+		printf("Division by zero is not defined!\n");
+	}else{
+		return a/b;
+	}
+}
+
+int main(){
+		int x,y,c,d,e,f;
+		char op;
+		printf("Enter Any Two Numbers:");
+		scanf("%d%d",&x,&y);
+		printf("Enter Operator choice (+,-,*,/):");
+		scanf(" %c",&op);
+		c=add(x,y);
+		d=sub(x,y);
+		e=mul(x,y);
+		f=div(x,y);
+		switch(op){
+			case '+':
+			printf("Addition is %d",c);
+			break;
+			case '-':
+			printf("Substraction is %d",d);
+			break;
+			case '*':
+			printf("Multiplication is %d",e);
+			break;
+			case '/':
+			printf("Divion is %d",f);
+			break;
+			default:
+			printf("Incorrect Operator !\n");
+			break;
+		}
+		return 0;
+}
+		
